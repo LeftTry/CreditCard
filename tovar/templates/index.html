@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Предсказатель зарплаты...</h1>
+<p>Вы - {{ user }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <label>Ваше имя?</label>
+    <input type="text" name="name" />
+    <input type="hidden" name="type" value="{{ user }}">
+    <input type="submit" />
+</form>
+
+
+</body>
+</html>
